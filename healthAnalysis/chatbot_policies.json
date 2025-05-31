@@ -1,0 +1,112 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi", "Hello", "Hey", "Good morning", "Good afternoon", "Good evening", "How are you?"
+      ],
+      "responses": [
+        "Hello! How can I help you today?",
+        "Hi there! What can I do for you?",
+        "Greetings! How may I assist you?"
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "Bye", "Goodbye", "See you later", "Farewell", "Thanks, bye"
+      ],
+      "responses": [
+        "Goodbye! Have a great day!",
+        "See you later!",
+        "Farewell! Take care."
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": [
+        "Thanks", "Thank you", "Appreciate it", "Many thanks"
+      ],
+      "responses": [
+        "You're welcome!",
+        "Glad to help!",
+        "My pleasure!"
+      ]
+    },
+    {
+      "tag": "about_app",
+      "patterns": [
+        "What is this app about?", "What does this do?", "Purpose of this site", "About this health census"
+      ],
+      "responses": [
+        "This is a Health Analysis Census application. You can add patient data, generate reports, and search for information on specific health conditions like Diabetes, Thyroid, and High Blood Pressure.",
+        "This app helps you manage and analyze health data. You can input patient details, view overall health trends, and get details on common conditions.",
+        "It's a healthcare data analysis tool. Enter patient info, get reports, and look up condition specifics."
+      ]
+    },
+    {
+      "tag": "conditions_info",
+      "patterns": [
+        "Tell me about conditions", "What conditions can I search?", "List conditions", "Health conditions"
+      ],
+      "responses": [
+        "You can search for information on: Diabetes, Thyroid, and High Blood Pressure.",
+        "Currently, you can find details on Diabetes, Thyroid, and High Blood Pressure.",
+        "I have information on Diabetes, Thyroid, and High Blood Pressure."
+      ]
+    },
+    {
+      "tag": "diabetes_info",
+      "patterns": [
+        "Tell me about diabetes", "What are diabetes symptoms?", "Diabetes prevention", "Diabetes treatment"
+      ],
+      "responses": [
+        "Diabetes is a chronic disease that affects how your body turns food into energy. Common symptoms include frequent urination, increased thirst, and fatigue. Prevention often involves maintaining a healthy weight and regular exercise. Treatment usually includes medication, insulin therapy, and lifestyle changes. You can also use the 'Search' bar above to get more details.",
+        "For Diabetes, key symptoms are increased thirst and fatigue. Prevention focuses on diet and exercise. Treatments vary, including insulin. Use the search bar for full details.",
+        "Looking for info on Diabetes? Symptoms: frequent urination, increased thirst, blurry vision. Prevention: healthy weight, balanced diet. Treatment: medication/insulin. Check the search bar for more."
+      ]
+    },
+    {
+      "tag": "thyroid_info",
+      "patterns": [
+        "Tell me about thyroid", "Thyroid symptoms", "Thyroid prevention", "Thyroid treatment"
+      ],
+      "responses": [
+        "Thyroid conditions can involve symptoms like fatigue, weight changes, and dry skin. Prevention often includes a balanced diet and regular check-ups. Treatment typically involves medication like levothyroxine. For more in-depth information, use the search bar on the page.",
+        "Thyroid issues can manifest as fatigue or weight changes. Prevention is about diet and check-ups. Treatment often involves medication. Use the search function for details.",
+        "Thyroid info: symptoms like fatigue, muscle weakness. Prevention: balanced diet, exercise. Treatment: usually medication. Find more via the search bar."
+      ]
+    },
+    {
+      "tag": "blood_pressure_info",
+      "patterns": [
+        "Tell me about high blood pressure", "Hypertension symptoms", "Blood pressure prevention", "Blood pressure treatment"
+      ],
+      "responses": [
+        "High Blood Pressure (Hypertension) often has symptoms like headaches, shortness of breath, or chest pain. Prevention methods include reducing salt intake and regular exercise. Treatment can involve medications like ACE inhibitors. You can find more details by searching for 'High Blood Pressure' on the page.",
+        "High Blood Pressure symptoms include headaches, shortness of breath. Prevention focuses on salt reduction and exercise. Treatment may involve medication. Search for 'High Blood Pressure' for more.",
+        "Hypertension symptoms: headaches, dizziness. Prevention: reduce salt, exercise. Treatment: medications prescribed by doctors. See the page search for specifics."
+      ]
+    },
+    {
+      "tag": "contact",
+      "patterns": [
+        "How to contact you?", "Contact details", "Get in touch", "Contact info"
+      ],
+      "responses": [
+        "You can reach us through the 'Contact Us' page. Just fill out the form with your details and message.",
+        "Please visit our 'Contact Us' page to get in touch.",
+        "To contact us, use the form on the 'Contact Us' section of the website."
+      ]
+    },
+    {
+      "tag": "unknown",
+      "patterns": [],
+      "responses": [
+        "I'm not sure how to respond to that. Could you please rephrase your question?",
+        "I'm sorry, I don't understand. Can you try asking in a different way?",
+        "Please provide more context or ask a specific question related to health conditions."
+      ]
+    }
+  ]
+}

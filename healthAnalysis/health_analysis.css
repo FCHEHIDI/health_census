@@ -1,0 +1,482 @@
+/* health_analysis.css - Medical Theme */
+
+:root {
+    --primary-blue: #007bff; /* A standard medical blue */
+    --secondary-green: #28a745; /* A complementary medical green */
+    --light-blue: #e6f7ff; /* Very light blue for backgrounds */
+    --dark-text: #333;
+    --light-text: #f8f9fa;
+    --border-color: #ced4da;
+    --shadow-light: rgba(0, 0, 0, 0.1);
+    --hover-blue: #0056b3;
+    --button-bg: #007bff;
+    --button-hover-bg: #0056b3;
+}
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif; /* A clean, modern font */
+    line-height: 1.6;
+    color: var(--dark-text);
+    background-color: var(--light-blue); /* Light blue background */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #ffffff; /* White background for nav */
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 5px var(--shadow-light); /* Subtle shadow */
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Ensure nav is on top */
+}
+
+nav h1 {
+    color: var(--primary-blue); /* Blue title */
+    font-size: 1.8em;
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 25px; /* Space between nav items */
+    align-items: center;
+}
+
+nav ul li {
+    display: inline-block; /* Keep inline for spacing */
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--dark-text);
+    font-weight: bold;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--primary-blue);
+}
+
+/* Search bar in nav */
+#conditionInput {
+    padding: 8px 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 0.9em;
+    margin-right: 10px;
+}
+
+#btnSearch {
+    padding: 8px 15px;
+    background-color: var(--secondary-green); /* Green search button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+}
+
+#btnSearch:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+/* Main Content Container */
+.container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px var(--shadow-light);
+    margin: 30px auto; /* Center the container with margin */
+    max-width: 900px;
+    width: 90%;
+    flex-grow: 1; /* Allow container to grow and fill space */
+}
+
+h1:not(nav h1) { /* Exclude nav h1 from this styling */
+    color: var(--primary-blue);
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.2em;
+}
+
+/* Form Styles */
+.analysisForm div {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.analysisForm label {
+    display: inline-block;
+    width: 120px; /* Align labels */
+    font-weight: bold;
+    color: var(--dark-text);
+}
+
+.analysisForm input[type="text"],
+.analysisForm input[type="number"],
+.analysisForm select {
+    flex-grow: 1; /* Allows input to take available width */
+    padding: 10px 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 1em;
+    color: var(--dark-text);
+}
+
+.analysisForm input[type="radio"] {
+    margin-right: 5px;
+    margin-left: 15px;
+}
+.analysisForm input[type="radio"] + label { /* Adjust label for radio buttons */
+    width: auto;
+    margin-right: 20px;
+}
+
+.analysisForm button {
+    display: block; /* Make button take full width */
+    width: 100%;
+    padding: 12px 20px;
+    background-color: var(--button-bg);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.analysisForm button:hover {
+    background-color: var(--button-hover-bg);
+    transform: translateY(-1px);
+}
+
+/* Report Section */
+#report {
+    background-color: var(--light-blue);
+    border: 1px solid var(--primary-blue);
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 30px;
+    text-align: left;
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+
+#report h2 {
+    color: var(--primary-blue);
+    font-size: 1.6em;
+    margin-bottom: 15px;
+}
+
+#report p {
+    margin-bottom: 10px;
+}
+
+/* Search Result Section */
+#result {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f8f9fa; /* Lighter background for search results */
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    text-align: left;
+}
+
+#result h2 {
+    color: var(--secondary-green); /* Green for search result heading */
+    margin-bottom: 15px;
+}
+
+#result img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 8px var(--shadow-light);
+}
+
+#result p {
+    margin-bottom: 8px;
+    color: var(--dark-text);
+}
+
+/* Contact Page Specific Styles */
+#contactForm {
+    max-width: 500px;
+    margin: 30px auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px var(--shadow-light);
+}
+
+#contactForm div {
+    margin-bottom: 15px;
+}
+
+#contactForm label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--dark-text);
+}
+
+#contactForm input[type="text"],
+#contactForm input[type="email"],
+#contactForm textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 1em;
+    color: var(--dark-text);
+}
+
+#contactForm textarea {
+    resize: vertical; /* Allow vertical resizing */
+    min-height: 100px;
+}
+
+#contactForm button {
+    width: 100%;
+    padding: 12px 20px;
+    background-color: var(--button-bg);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+#contactForm button:hover {
+    background-color: var(--button-hover-bg);
+}
+
+/* Footer (optional, but good practice) */
+footer {
+    margin-top: auto; /* Pushes footer to the bottom */
+    background-color: var(--primary-blue);
+    color: var(--light-text);
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 20px;
+    }
+    nav h1 {
+        margin-bottom: 10px;
+    }
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+        align-items: flex-start;
+    }
+    nav ul li {
+        width: 100%;
+        text-align: left;
+    }
+    #conditionInput, #btnSearch {
+        width: calc(100% - 10px);
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    .container {
+        padding: 20px;
+        width: 95%;
+    }
+    .analysisForm label {
+        width: 100%; /* Labels stack on small screens */
+        margin-bottom: 5px;
+    }
+    .analysisForm div {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .analysisForm input[type="radio"] + label {
+        margin-left: 0; /* Adjust for stacked layout */
+    }
+}
+
+/* Chatbot Specific Styles */
+
+#chatbot-button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: var(--primary-blue);
+    color: white;
+    padding: 15px 20px;
+    border-radius: 30px; /* Pill shape */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    font-weight: bold;
+    z-index: 2000; /* Above all other content */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#chatbot-button:hover {
+    background-color: var(--hover-blue);
+    transform: scale(1.05);
+}
+
+#chatbot-container {
+    position: fixed;
+    bottom: 90px; /* Above the button when open */
+    right: 30px;
+    width: 350px;
+    height: 450px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 2000;
+    transform: translateY(100%) scale(0.8); /* Start off-screen and smaller */
+    opacity: 0;
+    pointer-events: none; /* Make it unclickable when hidden */
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+#chatbot-container.open {
+    transform: translateY(0) scale(1); /* Slide up and scale in */
+    opacity: 1;
+    pointer-events: all; /* Make it clickable when open */
+}
+
+#chatbot-header {
+    background-color: var(--primary-blue);
+    color: white;
+    padding: 15px;
+    font-size: 1.2em;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+#chatbot-close-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
+    line-height: 1; /* For better vertical alignment of 'X' */
+    transition: color 0.2s ease;
+}
+
+#chatbot-close-btn:hover {
+    color: #f8f9fa;
+}
+
+#chatbot-messages {
+    flex-grow: 1; /* Takes available space */
+    padding: 15px;
+    overflow-y: auto; /* Scroll for messages */
+    background-color: #f5fafd; /* Very light blue chat background */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.user-message, .bot-message {
+    padding: 10px 15px;
+    border-radius: 15px;
+    max-width: 80%;
+    word-wrap: break-word;
+    font-size: 0.95em;
+}
+
+.user-message {
+    background-color: var(--light-blue); /* Light blue for user message bubbles */
+    color: var(--dark-text);
+    align-self: flex-end; /* Align to the right */
+    border-bottom-right-radius: 5px; /* Sharper corner on one side */
+}
+
+.bot-message {
+    background-color: #e2f0e9; /* Light green for bot message bubbles */
+    color: var(--dark-text);
+    align-self: flex-start; /* Align to the left */
+    border-bottom-left-radius: 5px; /* Sharper corner on one side */
+}
+
+
+#chatbot-input-area {
+    display: flex;
+    padding: 15px;
+    border-top: 1px solid #eee;
+    background-color: #ffffff;
+}
+
+#chatbot-input {
+    flex-grow: 1;
+    padding: 10px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 20px; /* Rounded input field */
+    font-size: 1em;
+    margin-right: 10px;
+    outline: none;
+}
+
+#chatbot-send-btn {
+    background-color: var(--secondary-green);
+    color: white;
+    border: none;
+    border-radius: 20px; /* Rounded send button */
+    padding: 10px 18px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+#chatbot-send-btn:hover {
+    background-color: #218838;
+}
+
+/* Responsive adjustments for chatbot */
+@media (max-width: 600px) {
+    #chatbot-button {
+        bottom: 20px;
+        right: 20px;
+        padding: 12px 16px;
+        font-size: 0.9em;
+    }
+    #chatbot-container {
+        width: calc(100% - 40px); /* Full width minus margin */
+        height: 70vh; /* Take more vertical space */
+        bottom: 20px;
+        right: 20px;
+        margin: 0 auto;
+    }
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Contact Us</title>
+  <link rel="stylesheet" href="./health_analysis.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav>
+    <h1>Health Analysis Census</h1>
+    <ul>
+      <li><a href="./index.html" id="home">Home</a></li>
+      <li><a href="./health_contact.html" id="contact">Contact Us</a></li>
+      <li><input type="text" id="conditionInput" placeholder="Enter a health condition"></li>
+      <li><button id='btnSearch'>Search</button></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h1>Contact Us</h1>
+    <p>Feel free to contact us to know more about your conditions and for treatment methods.</p>
+
+    <form id="contactForm">
+      <div>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required placeholder="Your Name">
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+      </div>
+      <div>
+        <label for="condition">Condition</label>
+        <input type="text" id="condition" name="condition" placeholder="e.g., Diabetes, Thyroid">
+      </div>
+      <div>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required placeholder="Your message here..."></textarea>
+      </div>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Health Analysis Census. All rights reserved.</p>
+  </footer>
+
+  <div id="chatbot-button">Chat with Us</div>
+  <div id="chatbot-container">
+    <div id="chatbot-header">
+      <span>HealthBot</span>
+      <button id="chatbot-close-btn">X</button>
+    </div>
+    <div id="chatbot-messages">
+      <div class="bot-message">Hello! How can I help you today?</div>
+    </div>
+    <div id="chatbot-input-area">
+      <input type="text" id="chatbot-input" placeholder="Type your message...">
+      <button id="chatbot-send-btn">Send</button>
+    </div>
+  </div>
+
+  <script src="./health_analysis.js"></script>
+  <script src="./chatbot.js"></script> </body>
+</html>
