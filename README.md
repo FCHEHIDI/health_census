@@ -1,6 +1,6 @@
 <h1>Health Census</h1>
 
-<h2>Develop an Application for Healthcare Census</h1>
+<h1>Develop an Application for Healthcare Census</h1>
 <p>In this healthcare data analysis interface, you will learn to build interactive forms using HTML and employ JavaScript to collect and manage patient data.
 
 This project will help you understand DOM manipulation and searching techniques based on a health condition. Moreover, you will acquire skills in dynamically generating reports within a webpage, showcasing statistical insights derived from the data. This practical exercise also emphasizes the application of data-driven decision making in healthcare analytics.
