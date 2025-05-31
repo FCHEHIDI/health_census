@@ -1,4 +1,4 @@
-<h2>ealth Census</h2>
+<h2>Health Census</h2>
 <h1>Develop an Application for Healthcare Census</h1>
 
 In this healthcare data analysis interface, you will learn to build interactive forms using HTML and employ JavaScript to collect and manage patient data.
